@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://vjs.zencdn.net/7.17.0/video-js.css" rel="stylesheet" />
+    <title>Reproductor de Video con Subtítulos</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <h1>Reproductor de Video con Subtítulos</h1>
+    <video id="videoElement" controls
+        class="video-js vjs-default-skin"
+        controls
+        preload="auto"
+        data-setup='{}'>
+    </video>
+    <div id="resultDiv"></div>
+    <div class="button-container">
+        <button id="skipIntroButton">Saltar Intro</button>
+        <button id="skipOutroButton">Saltar Outro</button>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+    <script src="script.js"></script>
+
+</body>
+</html>
