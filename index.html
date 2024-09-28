@@ -3,27 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://vjs.zencdn.net/7.17.0/video-js.css" rel="stylesheet" />
-    <title>Reproductor de Video con Subtítulos</title>
+    <title>Anime Reproductor Doble</title>
     <link rel="stylesheet" href="styles.css">
+    <!-- Incluir HLS.js desde el CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
 </head>
 <body>
+    <h1>Reproductor de Anime (Desde JSON y API)</h1>
 
-    <h1>Reproductor de Video con Subtítulos</h1>
-    <video id="videoElement" controls
-        class="video-js vjs-default-skin"
-        controls
-        preload="auto"
-        data-setup='{}'>
-    </video>
-    <div id="resultDiv"></div>
-    <div class="button-container">
-        <button id="skipIntroButton">Saltar Intro</button>
-        <button id="skipOutroButton">Saltar Outro</button>
-    </div>
+    <div id="video-container"></div>
 
-    <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
     <script src="script.js"></script>
-
 </body>
 </html>
