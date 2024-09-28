@@ -2,6 +2,27 @@
 function createVideoPlayerFromApi(data) {
     const container = document.getElementById('api-video');
 
+    // Recuperar datos de localStorage
+    const serverData = JSON.parse(localStorage.getItem('serverData'));
+
+    if (serverData) {
+        const { server, episodeId, category } = serverData;
+
+        // Usar los parámetros según sea necesario
+        console.log('Server:', server);
+        console.log('Episode ID:', episodeId);
+        console.log('Category:', category);
+
+        // Mostrar información en el contenedor
+        const videoContainer = document.getElementById('video-container');
+        videoContainer.innerHTML = `<p>Reproduciendo desde: ${server} - Episodio: ${episodeId} - Categoría: ${category}</p>`;
+
+        // Opcional: limpiar los datos después de usarlos
+        localStorage.removeItem('serverData');
+    } else {
+        console.log('No hay datos de servidor disponibles.');
+    }
+
     // Agregar título del reproductor
     const title = document.createElement('h2');
     title.innerText = `Reproductor de video (API)`;
